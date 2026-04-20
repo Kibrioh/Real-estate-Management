@@ -1,3 +1,4 @@
+//Declare the property objects
 const properties = [
   {
     name: 'Broadway Apartments',
@@ -31,12 +32,16 @@ const properties = [
   }
 ];
 
+//Iterate through the object elements
 for (const property of properties) {
   console.log('--- Property ---');
 
+  //Iterate through each property
   for (const key in property) {
+    //Check if an element of the property is an object data type
     if (typeof property[key] === 'object') {
       console.log(`Nested data in ${key}:`);
+      //Iterate through the property elements
       for (const subKey in property[key]) {
         console.log(`${subKey}: ${property[key][subKey]}`);
       }
